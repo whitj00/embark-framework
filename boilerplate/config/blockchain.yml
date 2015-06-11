@@ -13,7 +13,7 @@ development:
     password: config/password
 staging:
   rpc_host: localhost
-  rpc_port: 8101
+  rpc_port: 7777
   rpc_whitelist: "*"
   datadir: default
   network_id: 0
