@@ -19,7 +19,7 @@ module.exports = (grunt) ->
 
     grunt.log.writeln("address is : #{primaryAddress}")
 
-    result  = "web3.setProvider(new web3.providers.HttpProvider('http://#{rpcHost}:#{rpcPort}/api'));"
+    result  = "web3.setProvider(new web3.providers.HttpProvider('http://#{rpcHost}:#{rpcPort}/eth'));"
     result += "web3.eth.defaultAccount = web3.eth.accounts[0];"
 
     contractFiles = grunt.file.expand(grunt.config.get("deploy.contracts"))
