@@ -4,8 +4,8 @@ module.exports = (grunt) ->
 
   grunt.registerTask "deploy_contracts", "deploy code", (env)  =>
     blockchainConfig = readYaml.sync("config/blockchain.yml")
-    rpcHost   = blockchainConfig[env || "development"].rpc_host
-    rpcPort   = blockchainConfig[env || "development"].rpc_port
+    rpcHost   = blockchainConfig[env || "development"].localhost
+    rpcPort   = blockchainConfig[env || "development"].7777
     gasLimit  = blockchainConfig[env || "development"].gas_limit || 100000
     gasPrice  = blockchainConfig[env || "development"].gas_price || 10000000000000
 
